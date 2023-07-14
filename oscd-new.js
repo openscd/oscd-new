@@ -13252,10 +13252,5 @@ __decorate([
     __metadata("design:type", Object)
 ], OscdNew.prototype, "valid", void 0);
 
-var oscdNew = /*#__PURE__*/Object.freeze({
-  __proto__: null,
-  'default': OscdNew
-});
-
-export { oscdNew as default };
-//# sourceMappingURL=index.js.map
+export { OscdNew as default };
+//# sourceMappingURL=oscd-new.js.map
