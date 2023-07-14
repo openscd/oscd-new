@@ -7,6 +7,12 @@
     "./packages/*",
     "./components/*"
   ],
+  "scripts": {
+    "clean": "lerna run clean",
+    "build": "lerna run build",
+    "start": "lerna run start --scope @openscd/oscd-new",
+    "bundle": "lerna run clean && lerna run build && lerna run bundle"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/openscd/oscd-new.git"

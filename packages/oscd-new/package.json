@@ -5,7 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds\""
+    "start": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds\"",
+    "clean": "rimraf .tsbuildinfo custom-elements.json dist",
+    "bundle": "npm run clean && rollup -c rollup.config.js"
   },
   "author": "",
   "license": "ISC",

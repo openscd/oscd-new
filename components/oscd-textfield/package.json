@@ -25,13 +25,14 @@
     "test:unit": "tsc --p tsconfig.test.json && wtr --group default",
     "test:visual": "tsc --p tsconfig.test.json && wtr --group visual",
     "test:update": "tsc --p tsconfig.test.json && wtr --group visual --update-visual-baseline",
-    "test:watch": "tsc --p tsconfig.test.json && concurrently -k -r \"tsc --p tsconfig.test.json --watch --preserveWatchOutput\" \"wtr --watch\""
+    "test:watch": "tsc --p tsconfig.test.json && concurrently -k -r \"tsc --p tsconfig.test.json --watch --preserveWatchOutput\" \"wtr --watch\"",
+    "clean": "rimraf .tsbuildinfo custom-elements.json dist"
   },
   "dependencies": {
+    "@material/mwc-textfield": "0.27.0",
     "lit": "^2.7.4",
     "lit-element": "2.5.1",
-    "lit-html": "1.4.1",
-    "@material/mwc-textfield": "0.27.0"
+    "lit-html": "1.4.1"
   },
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "^0.4.17",
@@ -49,12 +50,9 @@
     "eslint-plugin-babel": "^5.3.1",
     "eslint-plugin-tsdoc": "^0.2.17",
     "prettier": "^2.4.1",
+    "rimraf": "^5.0.1",
     "tslib": "^2.3.1",
     "typescript": "^4.5.2"
   },
-  "customElements": "custom-elements.json",
-  "prettier": {
-    "singleQuote": true,
-    "arrowParens": "avoid"
-  }
+  "customElements": "custom-elements.json"
 }

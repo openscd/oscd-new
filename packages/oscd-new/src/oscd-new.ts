@@ -1,32 +1,31 @@
-import { query, state } from 'lit-element';
-import { html, LitElement, TemplateResult } from 'lit';
+import { query, state } from "lit-element";
+import { html, LitElement, TemplateResult } from "lit";
 
-import { newOpenEvent } from '@openscd/open-scd-core';
+import { newOpenEvent } from "@openscd/open-scd-core";
 
-import { MenuPlugin } from '@openscd/oscd-plugin-core';
+import { MenuPlugin } from "@openscd/oscd-plugin-core";
 
-import '@openscd/oscd-dialog';
-import '@openscd/oscd-textfield';
+import "@openscd/oscd-dialog";
+import "@openscd/oscd-textfield";
 
-import { OscdDialog } from '@openscd/oscd-dialog';
-import { OscdTextfield } from '@openscd/oscd-textfield';
+import { OscdDialog } from "@openscd/oscd-dialog";
+import { OscdTextfield } from "@openscd/oscd-textfield";
 
-import '@material/mwc-list';
-import '@material/mwc-list/mwc-radio-list-item';
+import "@material/mwc-list";
+import "@material/mwc-list/mwc-radio-list-item";
 
-import { List } from '@material/mwc-list';
-import { ListItemBase } from '@material/mwc-list/mwc-list-item-base';
-
-import { Scl } from '@openscd/oscd-scl';
+import { List } from "@material/mwc-list";
+import { ListItemBase } from "@material/mwc-list/mwc-list-item-base";
+import { Scl } from "@openscd/oscd-scl";
 
 export default class OscdNew extends LitElement implements MenuPlugin {
-  @query('oscd-dialog')
+  @query("oscd-dialog")
   dialog?: OscdDialog;
 
-  @query('oscd-textfield')
+  @query("oscd-textfield")
   textfield?: OscdTextfield;
 
-  @query('mwc-list')
+  @query("mwc-list")
   versionList?: List;
 
   @state()
@@ -77,7 +76,7 @@ export default class OscdNew extends LitElement implements MenuPlugin {
   }
 
   get name(): string {
-    return this.textfield?.value || '';
+    return this.textfield?.value || "";
   }
 
   get selectedVersion(): Scl.SupportedVersion | undefined {

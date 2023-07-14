@@ -15,9 +15,9 @@ export namespace Scl {
 
   export function newEmptySCD(
     id: string,
-    versionId: Scl.SupportedVersion
+    versionId: SupportedVersion
   ): XMLDocument {
-    const { version, revision, release } = Scl.supportedAttributes[versionId];
+    const { version, revision, release } = supportedAttributes[versionId];
     const markup = `<?xml version="1.0" encoding="UTF-8"?>
         <SCL xmlns="http://www.iec.ch/61850/2003/SCL" ${
           version ? `version="${version}"` : ""
