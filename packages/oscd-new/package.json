@@ -2,7 +2,7 @@
   "name": "@openscd/oscd-new",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/oscd-new.js",
   "type": "module",
   "scripts": {
     "start": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds\"",
