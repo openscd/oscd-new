@@ -1,7 +1,7 @@
 {
-    "name": "oscd-scl",
-    "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "projectType": "library",
-    "sourceRoot": "packages/oscd-scl/src",
-    "targets": {}
+  "name": "oscd-scl",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "packages/oscd-scl/src",
+  "targets": {}
 }
