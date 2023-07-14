@@ -1,1 +1,1 @@
-export * from "./oscd-new.js";
+export * as default from "./oscd-new.js";
