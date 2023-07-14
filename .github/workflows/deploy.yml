@@ -13,6 +13,7 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
+          npm i @nx/nx-linux-x64-gnu
           npm ci
           npm run bundle
 
