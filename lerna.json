@@ -4,5 +4,6 @@
   "packages": [
     "packages/*",
     "components/*"
-  ]
+  ],
+  "useNx": false
 }
