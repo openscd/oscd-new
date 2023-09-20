@@ -87,7 +87,7 @@ export default class OscdNew extends LitElement implements MenuPlugin {
   }
 
   protected onChange() {
-    this.valid = this.name.length > 0 && this.selectedVersion;
+    this.valid = (this.name.length > 0 && typeof this.selectedVersion !== 'undefined');
   }
 
   protected onSave() {
