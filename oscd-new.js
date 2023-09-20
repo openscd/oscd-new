@@ -13237,15 +13237,15 @@ class OscdNew extends s$1 {
 }
 __decorate([
     query("oscd-dialog"),
-    __metadata("design:type", OscdDialog)
+    __metadata("design:type", Function)
 ], OscdNew.prototype, "dialog", void 0);
 __decorate([
     query("oscd-textfield"),
-    __metadata("design:type", OscdTextfield)
+    __metadata("design:type", Function)
 ], OscdNew.prototype, "textfield", void 0);
 __decorate([
     query("mwc-list"),
-    __metadata("design:type", List)
+    __metadata("design:type", Function)
 ], OscdNew.prototype, "versionList", void 0);
 __decorate([
     state(),
