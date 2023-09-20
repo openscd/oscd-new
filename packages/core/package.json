@@ -1,0 +1,16 @@
+{
+  "name": "@openscd/oscd-plugin-core",
+  "version": "0.0.1",
+  "description": "OpenSCD Core Plugin Functionality",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf .tsbuildinfo custom-elements.json dist"
+  },
+  "author": "OpenSCD",
+  "license": "ISC",
+  "devDependencies": {
+    "rimraf": "^5.0.1"
+  }
+}

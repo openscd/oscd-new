@@ -1,0 +1,37 @@
+{
+  "name": "@openscd/oscd",
+  "version": "0.0.1",
+  "description": "Oscd New plugin",
+  "type": "module",
+  "workspaces": [
+    "./packages/*",
+    "./components/*"
+  ],
+  "scripts": {
+    "clean": "lerna run clean",
+    "build": "lerna run build",
+    "start": "lerna run start --scope @openscd/oscd-new",
+    "bundle": "lerna run clean && lerna run build && lerna run bundle"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openscd/oscd-new.git"
+  },
+  "keywords": [
+    "OpenSCD",
+    "OSCD"
+  ],
+  "author": "OpenSCD",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/openscd/oscd-new/issues"
+  },
+  "homepage": "https://github.com/openscd/oscd-new#readme",
+  "dependencies": {
+    "@openscd/open-scd-core": "^0.0.2",
+    "ts-standard": "^12.0.2"
+  },
+  "devDependencies": {
+    "lerna": "^7.1.3"
+  }
+}
