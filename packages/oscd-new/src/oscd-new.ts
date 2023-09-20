@@ -1,5 +1,11 @@
-import { query, state } from "lit-element";
-import { html, LitElement, TemplateResult } from "lit";
+import {
+  css,
+  query,
+  state,
+  LitElement,
+  TemplateResult,
+  html,
+} from "lit-element";
 
 import { newOpenEvent } from "@openscd/open-scd-core";
 
@@ -65,11 +71,7 @@ export default class OscdNew extends LitElement implements MenuPlugin {
         icon="create_new_folder"
         >Create</mwc-button
       >
-      <mwc-button
-        @click=${this.onCancel}
-        slot="secondaryAction"
-        style="--mdc-theme-primary: var(--mdc-theme-error)"
-      >
+      <mwc-button @click=${this.onCancel} slot="secondaryAction" id="cancel">
         Cancel</mwc-button
       >
     </oscd-dialog>`;
@@ -87,7 +89,9 @@ export default class OscdNew extends LitElement implements MenuPlugin {
   }
 
   protected onChange() {
-    this.valid = (this.name.length > 0 && typeof this.selectedVersion !== 'undefined');
+    this.valid =
+      this.name.trim().length > 0 &&
+      typeof this.selectedVersion !== "undefined";
   }
 
   protected onSave() {
@@ -107,4 +111,10 @@ export default class OscdNew extends LitElement implements MenuPlugin {
   protected onCancel() {
     this.dialog?.hide();
   }
+
+  public static styles = css`
+    #cancel {
+      --mdc-theme-primary: var(--oscd-theme-error, var(--mdc-theme-error));
+    }
+  `;
 }

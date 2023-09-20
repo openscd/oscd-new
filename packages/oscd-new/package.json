@@ -7,7 +7,13 @@
   "scripts": {
     "start": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds\"",
     "clean": "rimraf .tsbuildinfo custom-elements.json dist",
-    "bundle": "npm run clean && rollup -c rollup.config.js"
+    "bundle": "npm run clean && rollup -c rollup.config.js",
+    "size": "npm run bundle && size-limit",
+    "test": "tsc --p tsconfig.test.json && wtr --coverage",
+    "test:unit": "tsc --p tsconfig.test.json && wtr --group default",
+    "test:visual": "tsc --p tsconfig.test.json && wtr --group visual",
+    "test:update": "tsc --p tsconfig.test.json && wtr --group visual --update-visual-baseline",
+    "test:watch": "tsc --p tsconfig.test.json && concurrently -k -r \"tsc --p tsconfig.test.json --watch --preserveWatchOutput\" \"wtr --watch\""
   },
   "author": "",
   "license": "ISC",
@@ -17,7 +23,6 @@
     "@openscd/open-scd-core": "^0.0.2",
     "@openscd/oscd-dialog": "*",
     "@openscd/oscd-plugin-core": "*",
-    "@openscd/oscd-radio": "*",
     "@openscd/oscd-scl": "*",
     "@openscd/oscd-textfield": "*",
     "lit-element": "2.5.1",
@@ -55,5 +60,11 @@
     "tslib": "^2.3.1",
     "typescript": "^4.9.5"
   },
-  "customElements": "custom-elements.json"
+  "customElements": "custom-elements.json",
+  "size-limit": [
+    {
+      "path": "dist/oscd-new.js",
+      "limit": "10kb"
+    }
+  ]
 }
