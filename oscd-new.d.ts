@@ -1,4 +1,4 @@
-import { LitElement, TemplateResult } from "lit";
+import { LitElement, TemplateResult } from "lit-element";
 import { MenuPlugin } from "@openscd/oscd-plugin-core";
 import "@openscd/oscd-dialog";
 import "@openscd/oscd-textfield";
@@ -21,4 +21,5 @@ export default class OscdNew extends LitElement implements MenuPlugin {
     protected onChange(): void;
     protected onSave(): void;
     protected onCancel(): void;
+    static styles: import("lit-element").CSSResult;
 }
