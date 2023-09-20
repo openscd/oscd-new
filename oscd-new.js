@@ -13215,12 +13215,7 @@ class OscdNew extends s$1 {
         return selectedItem === null || selectedItem === void 0 ? void 0 : selectedItem.value;
     }
     onChange() {
-        if (this.name.length > 0 && this.selectedVersion) {
-            this.valid = true;
-        }
-        else {
-            this.valid = false;
-        }
+        this.valid = (this.name.length > 0 && typeof this.selectedVersion !== 'undefined');
     }
     onSave() {
         var _a;
